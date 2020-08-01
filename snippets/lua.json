@@ -1,0 +1,32 @@
+{
+    "fgetclientinfo": {
+        "prefix": "function getClientInfo",
+        "body": [
+            "function getClientInfo()",
+            "\treturn {",
+            "\t\tname = \"${1:插件名称}\",",
+            "\t\tcategory = \"${2:类型}\",",
+            "\t\tauthor = \"${3:开发者名称}\",",
+            "\t\tversionNumber = ${4:插件版本},",
+            "\t\tminEditorVersion = ${5:最低SV编辑器版本}",
+            "\t}",
+            "end"
+        ],
+        "description": "SV-插件描述-lua"
+    },
+    "fmain": {
+        "prefix": "function main",
+        "body": [
+            "function main()",
+            "",
+            "\tSV:finish()",
+            "end"
+        ],
+        "description": "SV-插件入口点-lua"
+    },
+    "sv": {
+        "prefix": "sv:",
+        "body": "sv:",
+        "description": "SV-访问对象-lua"
+    }
+}

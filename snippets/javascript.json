@@ -1,0 +1,32 @@
+{
+	"fgetclientinfo": {
+        "prefix": "function getClientInfo",
+        "body":[
+			"function getClientInfo() {",
+			"\t\treturn {",
+			"\t\t\"name\" : \"${1:插件名称}\",",
+			"\t\t\"category\" : \"${2:类型}\",",
+			"\t\t\"author\" : \"${3:开发者名称}\",",
+			"\t\t\"versionNumber\" : ${4:插件版本},",
+			"\t\t\"minEditorVersion\" : ${5:最低编辑编辑器版本}",
+			"\t};",
+			"}"
+		],
+        "description": "SV-插件描述-js"
+	},
+	"fmain": {
+        "prefix": "function main",
+        "body":[
+			"function main(){",
+			"",
+			"\tSV.finish();",
+		  	"}"
+		],
+        "description": "SV-插件入口点-js"
+    },
+    "sv": {
+        "prefix": "sv.",
+        "body": "sv.",
+        "description": "SV-访问对象-js"
+    }
+}

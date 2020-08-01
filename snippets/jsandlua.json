@@ -1,0 +1,742 @@
+{
+    "clearAll": {
+        "prefix": "clearAll",
+        "body": "clearAll()",
+        "description": "SV-取消选择此选择状态支持的所有对象类型"
+    },
+    "clearGroups": {
+        "prefix": "clearGroups",
+        "body": "clearGroups()",
+        "description": "SV-取消选择所有音符组轨道"
+    },
+    "getIndexInParent": {
+        "prefix": "getIndexInParent",
+        "body": "getIndexInParent()",
+        "description": "SV-获取其父对象中的当前对象的索引"
+    },
+    "getparent": {
+        "prefix": "getparent",
+        "body": "getparent()",
+        "description": "SV-获取父嵌套对象"
+    },
+    "getSelectedGroups": {
+        "prefix": "getSelectedGroups",
+        "body": "getSelectedGroups()",
+        "description": "SV-按照选择顺序获取所选音符组参考数组"
+    },
+    "hasSelectedContent": {
+        "prefix": "hasSelectedContent",
+        "body": "hasSelectedContent()",
+        "description": "SV-检查是否选择了任何内容"
+    },
+    "hasSelectedGroups": {
+        "prefix": "hasSelectedGroups",
+        "body": "hasSelectedGroups()",
+        "description": "SV-检查是否至少选择了一个音符组参考"
+    },
+    "hasUnfinishedEdits": {
+        "prefix": "hasUnfinishedEdits",
+        "body": "hasUnfinishedEdits()",
+        "description": "SV-检查所选对象上是否有任何未完成的编辑"
+    },
+    "isMemoryManaged": {
+        "prefix": "isMemoryManaged",
+        "body": "isMemoryManaged()",
+        "description": "SV-检查当前对象是否为内存管理（即脚本环境收集的垃圾）"
+    },
+    "getParent": {
+        "prefix": "selectGroup",
+        "body": "selectGroup(${1:Reference})",
+        "description": "SV-向所选内容添加音符组轨道"
+    },
+    "unselectGroup": {
+        "prefix": "unselectGroup",
+        "body": "unselectGroup(${1:Reference})",
+        "description": "SV-取消选择音符组轨道"
+    },
+    "getNavigation": {
+        "prefix": "getNavigation",
+        "body": "getNavigation()",
+        "description": "SV-获取轨道排列区域的坐标系"
+    },
+    "getSelection": {
+        "prefix": "getSelection",
+        "body": "getSelection()",
+        "description": "SV-获取排列视图的选择状态对象"
+    },
+    "add": {
+        "prefix": "add",
+        "body": "add(${1:b}, ${2:v})",
+        "description": "SV-添加具有位置和参数值的控制点。如果已有点，则参数值将更新"
+    },
+    "clone": {
+        "prefix": "clone",
+        "body": "clone()",
+        "description": "SV-当前对象的深层副本"
+    },
+    "get": {
+        "prefix": "get",
+        "body": "get(${1:b})",
+        "description": "SV-获取位置的插值参数值"
+    },
+    "getAllPoints": {
+        "prefix": "getAllPoints",
+        "body": "getAllPoints()",
+        "description": "SV-具有无限范围的自动化版本"
+    },
+    "getDefinition": {
+        "prefix": "getDefinition",
+        "body": "getDefinition()",
+        "description": "SV-获取具有以下属性的定义对象"
+    },
+    "getInterpolationMethod": {
+        "prefix": "getInterpolationMethod",
+        "body": "getInterpolationMethod()",
+        "description": "SV-返回如何插值控制点之间的值"
+    },
+    "getLinear": {
+        "prefix": "getLinear",
+        "body": "getLinear(${1:b})",
+        "description": "SV-使用线性插值的自动化版本（即使自动化插值方法不是线性）"
+    },
+    "getPoints": {
+        "prefix": "getPoints",
+        "body": "getPoints(${1:begin}, ${2:end})",
+        "description": "SV-获取位置介于和之间的控制点数组"
+    },
+    "getType": {
+        "prefix": "getType",
+        "body": "getType()",
+        "description": "SV-获取参数类型"
+    },
+    "remove": {
+        "prefix": "remove",
+        "body": "remove(${1:b})",
+        "description": "SV-如果存在控制点，删除控制点"
+    },
+    "removeba": {
+        "prefix": "remove",
+        "body": "remove(${1:begin}, ${2:end})",
+        "description": "SV-删除位置和之间的所有控制点"
+    },
+    "removeAll": {
+        "prefix": "removeAll",
+        "body": "removeAll()",
+        "description": "SV-删除所有控制点"
+    },
+    "simplify": {
+        "prefix": "simplify",
+        "body": "simplify(${1:begin}, ${2:end}, ${3:threshold})",
+        "description": "SV-通过移除对曲线形状没有显著贡献的控制点，将参数曲线从位置简化为位置"
+    },
+    "getTimePxPerUnit": {
+        "prefix": "getTimePxPerUnit",
+        "body": "getTimePxPerUnit()",
+        "description": "SV-获取水平方向的缩放因子"
+    },
+    "getTimeViewRange": {
+        "prefix": "getTimeViewRange",
+        "body": "getTimeViewRange()",
+        "description": "SV-获取当前可见时间范围"
+    },
+    "getValuePxPerUnit": {
+        "prefix": "getValuePxPerUnit",
+        "body": "getValuePxPerUnit()",
+        "description": "SV-获取垂直方向的缩放系数"
+    },
+    "getValueViewRange": {
+        "prefix": "getValueViewRange",
+        "body": "getValueViewRange()",
+        "description": "SV-获取当前可见值范围"
+    },
+    "setTimeLeft": {
+        "prefix": "setTimeLeft",
+        "body": "setTimeLeft(${1:time})",
+        "description": "SV-移动可见区域，使左侧位于time"
+    },
+    "setTimeRight": {
+        "prefix": "setTimeRight",
+        "body": "setTimeRight(${1:time})",
+        "description": "SV-移动可见区域，使右侧位于time"
+    },
+    "setTimeScale": {
+        "prefix": "setTimeScale",
+        "body": "setTimeScale(${1:scale})",
+        "description": "SV-将水平缩放因子设置为scale"
+    },
+    "setValueCenter": {
+        "prefix": "setValueCenter",
+        "body": "setValueCenter(${1:v})",
+        "description": "SV-移动可见区域，使垂直中心位于v"
+    },
+    "snap": {
+        "prefix": "snap",
+        "body": "snap(${1:b})",
+        "description": "SV-基于捕捉设置舍入时间位置"
+    },
+    "t2x": {
+        "prefix": "t2x",
+        "body": "t2x(${1:t})",
+        "description": "SV-将时间位置转换为x位置"
+    },
+    "v2y": {
+        "prefix": "v2y",
+        "body": "v2y(${1:v})",
+        "description": "SV-将值转换为y位置"
+    },
+    "x2t": {
+        "prefix": "x2t",
+        "body": "x2t(${1:x})",
+        "description": "SV-将x位置转换为时间位置"
+    },
+    "y2v": {
+        "prefix": "y2v",
+        "body": "y2v(${1:y})",
+        "description": "SV-将y位置转换为值"
+    },
+    "getCurrentGroup": {
+        "prefix": "getCurrentGroup",
+        "body": "getCurrentGroup()",
+        "description": "SV-获取用户在内部工作的当前NoteGroup参考"
+    },
+    "getCurrentTrack": {
+        "prefix": "getCurrentTrack",
+        "body": "getCurrentTrack()",
+        "description": "SV-获取当前轨道"
+    },
+    "getAttributes": {
+        "prefix": "getAttributes",
+        "body": "getAttributes()",
+        "description": "SV-获取包含音符属性的对象"
+    },
+    "getDuration": {
+        "prefix": "getDuration",
+        "body": "getDuration()",
+        "description": "SV-获取音符的持续时间"
+    },
+    "getEnd": {
+        "prefix": "getEnd",
+        "body": "getEnd()",
+        "description": "SV-获取音符的结束位置（开始+持续时间）"
+    },
+    "getLyrics": {
+        "prefix": "getLyrics",
+        "body": "getLyrics()",
+        "description": "SV-获取此说明的歌词"
+    },
+    "getOnset": {
+        "prefix": "getOnset",
+        "body": "getOnset()",
+        "description": "SV-获取音符的开始位置"
+    },
+    "getPhonemes": {
+        "prefix": "getPhonemes",
+        "body": "getPhonemes()",
+        "description": "SV-返回用户指定的phoneme"
+    },
+    "getPitch": {
+        "prefix": "getPitch",
+        "body": "getPitch()",
+        "description": "SV-将音高作为MIDI编号，C4映射到60"
+    },
+    "setAttributes": {
+        "prefix": "setAttributes",
+        "body": "setAttributes()",
+        "description": "SV-基于属性对象设置音符属性"
+    },
+    "setDuration": {
+        "prefix": "setDuration",
+        "body": "setDuration(${1:t})",
+        "description": "SV-将音符调整为持续时间"
+    },
+    "setLyrics": {
+        "prefix": "setLyrics",
+        "body": "setLyrics(${1:lyrics})",
+        "description": "SV-更改歌词"
+    },
+    "setOnset": {
+        "prefix": "setOnset",
+        "body": "setOnset(${1:t})",
+        "description": "SV-移动音符以从开始"
+    },
+    "setPhonemes": {
+        "prefix": "setPhonemes",
+        "body": "setPhonemes(${1:phoneme_str})",
+        "description": "SV-将听时更改为（我也不会翻译呜呜呜）"
+    },
+    "setPitch": {
+        "prefix": "setPitch",
+        "body": "setPitch(${1:pitchNumber})",
+        "description": "SV-将音高设置为一个MIDI编号"
+    },
+    "setTimeRange": {
+        "prefix": "setTimeRange",
+        "body": "setTimeRange(${1:onset},${2:duration})",
+        "description": "SV-设置开始和持续时间"
+    },
+    "addNote": {
+        "prefix": "addNote",
+        "body": "addNote(${1:note})",
+        "description": "SV-为此添加音符并返回添加的音符的索引"
+    },
+    "getName": {
+        "prefix": "getName",
+        "body": "getName()",
+        "description": "SV-获取此音符组的用户指定名称"
+    },
+    "getNote": {
+        "prefix": "getNote",
+        "body": "getNote()",
+        "description": "SV-获取音符"
+    },
+    "getNumNotes": {
+        "prefix": "getNumNotes",
+        "body": "getNumNotes()",
+        "description": "SV-获取音符组中的音符数"
+    },
+    "getParameter": {
+        "prefix": "getParameter",
+        "body": "getParameter((${1:type})",
+        "description": "SV-获取参数的自动化对象"
+    },
+    "getUUID": {
+        "prefix": "getUUID",
+        "body": "getUUID()",
+        "description": "SV-获取通用唯一标识符"
+    },
+    "removeNote": {
+        "prefix": "removeNote",
+        "body": "removeNote(${1:index})",
+        "description": "SV-删除index的音符"
+    },
+    "setName": {
+        "prefix": "setName",
+        "body": "setName(${1:name})",
+        "description": "SV-设置此音符组的名称"
+    },
+    "getPitchOffset": {
+        "prefix": "getPitchOffset",
+        "body": "getPitchOffset()",
+        "description": "SV-将音高移动（半音）应用于目标音符组中的所有音符"
+    },
+    "getTarget": {
+        "prefix": "getTarget",
+        "body": "getTarget()",
+        "description": "SV-获取目标音符组"
+    },
+    "getTimeOffset": {
+        "prefix": "getTimeOffset",
+        "body": "getTimeOffset()",
+        "description": "SV-获取应用于目标音符组中所有音符的时间偏移"
+    },
+    "getVoice": {
+        "prefix": "getVoice",
+        "body": "getVoice()",
+        "description": "SV-获取一个对象，该对象包含此组的默认语音属性"
+    },
+    "isInstrumental": {
+        "prefix": "isInstrumental",
+        "body": "isInstrumental()",
+        "description": "SV-这是否是指外部音频文件"
+    },
+    "isMain": {
+        "prefix": "isMain",
+        "body": "isMain()",
+        "description": "SV-这是否是指父轨道的主组"
+    },
+    "setPitchOffset": {
+        "prefix": "setPitchOffset",
+        "body": "setPitchOffset(${1:pitchOffset})",
+        "description": "SV-将间距偏移设置为（半音）"
+    },
+    "setTarget": {
+        "prefix": "setTarget",
+        "body": "setTarget(${1:group})",
+        "description": "SV-设置目标音符组"
+    },
+    "setTimeOffset": {
+        "prefix": "setTimeOffset",
+        "body": "setTimeOffset(${1:blickOffset})",
+        "description": "SV-将时间偏移设置为"
+    },
+    "setVoice": {
+        "prefix": "setVoice",
+        "body": "setVoice()",
+        "description": "SV-基于属性对象设置语音属性"
+    },
+    "getPlayhead": {
+        "prefix": "getPlayhead",
+        "body": "getPlayhead()",
+        "description": "SV-以秒为单位获取当前播放头位置"
+    },
+    "getStatus": {
+        "prefix": "getStatus",
+        "body": "getStatus()",
+        "description": "SV-获取当前播放状态"
+    },
+    "loop": {
+        "prefix": "loop",
+        "body": "loop(${1:tBegin}, ${2:tEnd})",
+        "description": "SV-在begin和end之间开始循环"
+    },
+    "pause": {
+        "prefix": "pause",
+        "body": "pause()",
+        "description": "SV-暂停"
+    },
+    "play": {
+        "prefix": "play",
+        "body": "play()",
+        "description": "SV-播放"
+    },
+    "seek": {
+        "prefix": "seek",
+        "body": "seek()",
+        "description": "SV-将播放头位置设置为"
+    },
+    "stop": {
+        "prefix": "stop",
+        "body": "stop()",
+        "description": "SV-停止播放，将播放头重置为播放开始位置"
+    },
+    "addNoteGroup": {
+        "prefix": "addNoteGroup",
+        "body": "addNoteGroup(${1:group}, ${2:suggestedIndex})",
+        "description": "SV-插入项目库"
+    },
+    "addTrack": {
+        "prefix": "addTrack",
+        "body": "addTrack()",
+        "description": "SV-添加音轨"
+    },
+    "getFileName": {
+        "prefix": "getFileName",
+        "body": "getFileName()",
+        "description": "SV-获取文件名"
+    },
+    "getNoteGroup": {
+        "prefix": "getNoteGroup",
+        "body": "getNoteGroup(${1:id})",
+        "description": "SV-获取音符组"
+    },
+    "getNumNoteGroupsInLibrary": {
+        "prefix": "getNumNoteGroupsInLibrary",
+        "body": "getNumNoteGroupsInLibrary()",
+        "description": "SV-获取项目库中的音符组数"
+    },
+    "getNumTracks": {
+        "prefix": "getNumTracks",
+        "body": "getNumTracks()",
+        "description": "SV-获取音轨数"
+    },
+    "getTimeAxis": {
+        "prefix": "getTimeAxis",
+        "body": "getTimeAxis()",
+        "description": "SV-获取timeaxis对象"
+    },
+    "getTrack": {
+        "prefix": "getTrack",
+        "body": "getTrack(${1:index})",
+        "description": "SV-获取音符的轨道"
+    },
+    "newUndoRecord": {
+        "prefix": "newUndoRecord",
+        "body": "newUndoRecord()",
+        "description": "SV-为此添加新的撤消记录"
+    },
+    "removeNoteGroup": {
+        "prefix": "removeNoteGroup",
+        "body": "removeNoteGroup(${1:index})",
+        "description": "SV-删除音符组"
+    },
+    "removeTrack": {
+        "prefix": "removeTrack",
+        "body": "removeTrack(${1:index})",
+        "description": "SV-删除轨道"
+    },
+    "blackKey": {
+        "prefix": "blackKey",
+        "body": "blackKey(${1:k})",
+        "description": "SV-检查音符（以MIDI数字传递）是否是钢琴上的黑色键"
+    },
+    "blick2Quarter": {
+        "prefix": "blick2Quarter",
+        "body": "blick2Quarter(${1:b})",
+        "description": "SV-从闪烁数转换为季度数"
+    },
+    "blick2Seconds": {
+        "prefix": "blick2Seconds",
+        "body": "blick2Seconds(${1:b},${2:bpm})",
+        "description": "SV-使用指定的每分钟节拍从闪烁转换为秒"
+    },
+    "blickRoundDiv": {
+        "prefix": "blickRoundDiv",
+        "body": "blickRoundDiv(${1:dividend},${2:divisor})",
+        "description": "SV-（闪烁）的舍入除法（闪烁）"
+    },
+    "blickRoundTo": {
+        "prefix": "blickRoundTo",
+        "body": "blickRoundTo(${1:b},${2:interval})",
+        "description": "SV-返回闪烁中最接近的倍数"
+    },
+    "create": {
+        "prefix": "create",
+        "body": "create(${1:type})",
+        "description": "SV-创建新对象"
+    },
+    "freq2Pitch": {
+        "prefix": "freq2Pitch",
+        "body": "freq2Pitch()",
+        "description": "SV-将 Hz 的频率转换为 MIDI 编号"
+    },
+    "getHostClipboard": {
+        "prefix": "getHostClipboard",
+        "body": "getHostClipboard()",
+        "description": "SV-获取系统剪贴板上的文本"
+    },
+    "getArrangement": {
+        "prefix": "getArrangement",
+        "body": "getArrangement()",
+        "description": "SV-获取排列视图的状态对象"
+    },
+    "getHostInfo": {
+        "prefix": "getHostInfo",
+        "body": "getHostInfo()",
+        "description": "SV-获取具有系统属性的对象"
+    },
+    "getMainEditor": {
+        "prefix": "getMainEditor",
+        "body": "getMainEditor(${1:group})",
+        "description": "SV-获取钢琴卷的UI状态对象"
+    },
+    "getPhonemesForGroup": {
+        "prefix": "getPhonemesForGroup",
+        "body": "getPhonemesForGroup()",
+        "description": "SV-获取组中所有音符的音素"
+    },
+    "getPlayback": {
+        "prefix": "getPlayback",
+        "body": "getPlayback()",
+        "description": "SV-获取用于控制播放的UI状态对象"
+    },
+    "getProject": {
+        "prefix": "getProject",
+        "body": "getProject()",
+        "description": "SV-获取当前打开的项目"
+    },
+    "pitch2freq": {
+        "prefix": "pitch2freq",
+        "body": "pitch2freq(${1:p})",
+        "description": "SV-将MIDI编号转换为Hz频率"
+    },
+    "quarter2Blick": {
+        "prefix": "quarter2Blick",
+        "body": "quarter2Blick(${1:q})",
+        "description": "SV-从季度数转换为闪烁数"
+    },
+    "seconds2Blick": {
+        "prefix": "seconds2Blick",
+        "body": "seconds2Blick(${1:s}, ${2:bpm})",
+        "description": "SV-使用每分钟指定节拍从秒转换为闪烁"
+    },
+    "setHostClipboard": {
+        "prefix": "setHostClipboard",
+        "body": "setHostClipboard(${1:text})",
+        "description": "SV-设置系统剪贴板"
+    },
+    "setTimeout": {
+        "prefix": "setTimeout",
+        "body": "setTimeout(${1:timeOut}, ${2:callback})",
+        "description": "SV-安排毫秒后延迟呼叫"
+    },
+    "showCustomDialog": {
+        "prefix": "showCustomDialog",
+        "body": "showCustomDialog(${1:form})",
+        "description": "SV-返回来自用户的输入"
+    },
+    "showCustomDialogAsync": {
+        "prefix": "showCustomDialogAsync",
+        "body": "showCustomDialogAsync(${1:form}, ${2:callback})",
+        "description": "SV-显示form中定义的自定义对话框，而不阻止脚本执行"
+    },
+    "showInputBox": {
+        "prefix": "showInputBox",
+        "body": "showInputBox(${1:title}, ${2:message}, ${3:defaultText})",
+        "description": "SV-返回来自用户的文本输入"
+    },
+    "showInputBoxAsync": {
+        "prefix": "showInputBoxAsync",
+        "body": "showInputBoxAsync(${1:title}, ${2:message}, ${3:defaultText}, ${4:callback})",
+        "description": "SV-返回来自用户的文本输入而不阻止脚本执行"
+    },
+    "showMessageBox": {
+        "prefix": "showMessageBox",
+        "body": "showMessageBox(${1:title}, ${2:message})",
+        "description": "SV-阻止脚本执行，直到用户关闭消息框"
+    },
+    "showMessageBoxAsync": {
+        "prefix": "showMessageBoxAsync",
+        "body": "showMessageBoxAsync(${1:title}, ${2:message}, ${3:callback})",
+        "description": "SV-在不阻止脚本执行的情况下弹出消息框"
+    },
+    "showOkCancelBox": {
+        "prefix": "showOkCancelBox",
+        "body": "showOkCancelBox(${1:title}, ${2:message})",
+        "description": "SV-如果按下确定按钮，则返回 true"
+    },
+    "showOkCancelBoxAsync": {
+        "prefix": "showOkCancelBoxAsync",
+        "body": "showOkCancelBoxAsync(${1:title}, ${2:message}, ${3:callback})",
+        "description": "SV-显示一个包含确定按钮和取消按钮的消息框，而不会阻止脚本执行"
+    },
+    "showYesNoCancelBox": {
+        "prefix": "showYesNoCancelBox",
+        "body": "showYesNoCancelBox(${1:title}, ${2:message})",
+        "description": "SV-返回是，否或取消"
+    },
+    "showYesNoCancelBoxAsync": {
+        "prefix": "showYesNoCancelBoxAsync",
+        "body": "showYesNoCancelBoxAsync(${1:title}, ${2:message}, ${3:callback})",
+        "description": "SV-返回是，否或取消，而不会阻止脚本执行"
+    },
+    "T": {
+        "prefix": "T",
+        "body": "T(${1:text})",
+        "description": "SV-基于当前UI语言设置获取t的本地化版本"
+    },
+    "addMeasureMark": {
+        "prefix": "addMeasureMark",
+        "body": "addMeasureMark(${1:measure}, ${2:nomin}, ${3:denom})",
+        "description": "SV-在位置（度量值编号）插入/度量标记"
+    },
+    "addTempoMark": {
+        "prefix": "addTempoMark",
+        "body": "addTempoMark(${1:b}, ${2:bpm})",
+        "description": "SV-插入一个节奏标记"
+    },
+    "getAllMeasureMarks": {
+        "prefix": "getAllMeasureMarks",
+        "body": "getAllMeasureMarks()",
+        "description": "SV-在此获取所有测量标记"
+    },
+    "getAllTempoMarks": {
+        "prefix": "getAllTempoMarks",
+        "body": "getAllTempoMarks()",
+        "description": "SV-得到所有的节奏标记"
+    },
+    "getBlickFromSeconds": {
+        "prefix": "getBlickFromSeconds",
+        "body": "getBlickFromSeconds(${1:t})",
+        "description": "SV-将物理时间（秒）转换为音乐时间（闪烁）"
+    },
+    "getMeasureAt": {
+        "prefix": "getMeasureAt",
+        "body": "getMeasureAt(${1:b})",
+        "description": "SV-获取位置（闪烁）的度量编号"
+    },
+    "getMeasureMarkAt": {
+        "prefix": "getMeasureMarkAt",
+        "body": "getMeasureMarkAt(${1:measureNumber})",
+        "description": "SV-在度量值时获取度量值标记"
+    },
+    "getSecondsFromBlick": {
+        "prefix": "getSecondsFromBlick",
+        "body": "getSecondsFromBlick(${1:b})",
+        "description": "SV-将音乐时间（闪烁）转换为物理时间（秒）"
+    },
+    "getMeasureMarkAtBlick": {
+        "prefix": "getMeasureMarkAtBlick",
+        "body": "getMeasureMarkAtBlick(${1:b})",
+        "description": "SV-获取在位置有效（闪烁）的度量值标记"
+    },
+    "getTempoMarkAt": {
+        "prefix": "getTempoMarkAt",
+        "body": "getTempoMarkAt(${1:b})",
+        "description": "SV-获取在位置有效的节奏标记"
+    },
+    "removeMeasureMark": {
+        "prefix": "removeMeasureMark",
+        "body": "removeMeasureMark(${1:measure})",
+        "description": "SV-删除度量值编号的度量值标记"
+    },
+    "removeTempoMark": {
+        "prefix": "removeTempoMark",
+        "body": "removeTempoMark(${1:b})",
+        "description": "SV-移除位置（闪烁）时的节奏标记"
+    },
+    "addGroupReference": {
+        "prefix": "addGroupReference",
+        "body": "addGroupReference(${1:group})",
+        "description": "SV-为此添加音符组轨道并返回添加组的索引"
+    },
+    "getDisplayColor": {
+        "prefix": "getDisplayColor",
+        "body": "getDisplayColor()",
+        "description": "SV-将曲目的颜色作为十六进制字符串"
+    },
+    "getDisplayOrder": {
+        "prefix": "getDisplayOrder",
+        "body": "getDisplayOrder()",
+        "description": "SV-获取父项目内轨道的显示顺序"
+    },
+    "getGroupReference": {
+        "prefix": "getGroupReference",
+        "body": "getGroupReference()",
+        "description": "SV-获取音符组参考"
+    },
+    "getNumGroups": {
+        "prefix": "getNumGroups",
+        "body": "getNumGroups()",
+        "description": "SV-获取轨道数"
+    },
+    "isBounced": {
+        "prefix": "isBounced",
+        "body": "isBounced()",
+        "description": "SV-是否导出到文件的选项"
+    },
+    "removeGroupReference": {
+        "prefix": "removeGroupReference",
+        "body": "removeGroupReference(${1:index})",
+        "description": "SV-从中删除音符组轨道"
+    },
+    "setBounced": {
+        "prefix": "setBounced",
+        "body": "setBounced(${1:enabled})",
+        "description": "SV-设置是否导出到文件"
+    },
+    "setDisplayColor": {
+        "prefix": "setDisplayColor",
+        "body": "setDisplayColor()",
+        "description": "SV-将显示颜色设置为十六进制字符串"
+    },
+    "clearNotes": {
+        "prefix": "clearNotes",
+        "body": "clearNotes()",
+        "description": "SV-取消选择所有音符"
+    },
+    "getSelectedNotes": {
+        "prefix": "getSelectedNotes",
+        "body": "getSelectedNotes()",
+        "description": "SV-按照选择顺序获取所选音符的数组"
+    },
+    "hasSelectedNotes": {
+        "prefix": "hasSelectedNotes",
+        "body": "hasSelectedNotes()",
+        "description": "SV-检查是否至少选择了一个音符组参考"
+    },
+    "selectGroup": {
+        "prefix": "selectGroup",
+        "body": "selectGroup(${1:reference})",
+        "description": "SV-向所选内容添加音符组轨道"
+    },
+    "selectNote": {
+        "prefix": "selectNote",
+        "body": "selectNote(${1:note})",
+        "description": "SV-选择音符"
+    },
+    "unselectNote": {
+        "prefix": "unselectNote",
+        "body": "unselectNote(${1:note)",
+        "description": "SV-取消选择音符"
+    }
+}
