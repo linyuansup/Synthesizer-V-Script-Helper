@@ -9,6 +9,10 @@
 	"preview": true,
 	"publisher": "linyuansup",
 	"icon": "svcoding.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/linyuansup/Synthesizer-V-Script-Helper.git"
+	  },
 	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.27.0"

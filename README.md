@@ -30,4 +30,4 @@ Version. 0.1.0 Preview
 
 
 <br/><br/><br/><br/><br/>
-* 小声bb：有没有大佬帮我翻译下SV官方文档啊呜呜呜# Synthesizer-V-Script-Helper
+* 小声bb：有没有大佬帮我翻译下SV官方文档啊呜呜呜
